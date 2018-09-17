@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  java:
+    build: ./java
+    image: java/helloworld:1.0
+    container_name: java
+    ports:
+      - 24000:24000
+
+  nodejs:
+    build: ./nodejs
+    image: nodejs/helloworld:1.0
+    container_name: nodejs
+    ports:
+      - 24001:24001
+
+  python:
+    build: ./python
+    image: python/helloworld:1.0
+    container_name: python
+    ports:
+      - 24002:24002
