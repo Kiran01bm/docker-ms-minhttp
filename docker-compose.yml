@@ -35,3 +35,11 @@ services:
     container_name: shs_dotnet
     ports:
       - 24004:80
+
+  ruby:
+    build: ./ruy
+    image: ruby/helloworld:1.0
+    container_name: shs_ruby
+    ports:
+      - 24005:24005
+
