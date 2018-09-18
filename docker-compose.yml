@@ -21,3 +21,17 @@ services:
     container_name: python
     ports:
       - 24002:24002
+
+  go:
+    build: ./go
+    image: go/helloworld:1.0
+    container_name: go
+    ports:
+      - 24003:24003
+
+  dotnet:
+    build: ./dotnet
+    image: dotnet/helloworld:1.0
+    container_name: dotnet
+    ports:
+      - 24004:80
