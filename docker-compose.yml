@@ -37,7 +37,7 @@ services:
       - 24004:80
 
   ruby:
-    build: ./ruy
+    build: ./ruby
     image: ruby/helloworld:1.0
     container_name: shs_ruby
     ports:
