@@ -4,34 +4,34 @@ services:
   java:
     build: ./java
     image: java/helloworld:1.0
-    container_name: java
+    container_name: shs_java
     ports:
       - 24000:24000
 
   nodejs:
     build: ./nodejs
     image: nodejs/helloworld:1.0
-    container_name: nodejs
+    container_name: shs_nodejs
     ports:
       - 24001:24001
 
   python:
     build: ./python
     image: python/helloworld:1.0
-    container_name: python
+    container_name: shs_python
     ports:
       - 24002:24002
 
   go:
     build: ./go
     image: go/helloworld:1.0
-    container_name: go
+    container_name: shs_go
     ports:
       - 24003:24003
 
   dotnet:
     build: ./dotnet
     image: dotnet/helloworld:1.0
-    container_name: dotnet
+    container_name: shs_dotnet
     ports:
       - 24004:80

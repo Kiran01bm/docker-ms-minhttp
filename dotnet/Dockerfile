@@ -1,4 +1,7 @@
 FROM microsoft/dotnet:2.1-sdk
+
+LABEL maintainer="kiran01bm"
+
 WORKDIR /app
 
 # Create a new project/solution based on the web template

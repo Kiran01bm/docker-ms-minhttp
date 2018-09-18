@@ -1,5 +1,7 @@
 FROM oracle/openjdk
 
+LABEL maintainer="kiran01bm"
+
 # App workdir
 WORKDIR /usr/apps/helloworld
 

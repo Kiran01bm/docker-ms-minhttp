@@ -1,5 +1,7 @@
 FROM golang:1.11.0-alpine
 
+LABEL maintainer="kiran01bm"
+
 # Install git
 RUN apk add --no-cache git
 
