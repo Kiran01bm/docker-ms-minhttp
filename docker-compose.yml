@@ -7,6 +7,14 @@ services:
     container_name: shs_java
     ports:
       - 24000:24000
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 100M
+        reservations:
+          cpus: '0.25'
+          memory: 50M
 
   nodejs:
     build: ./nodejs
@@ -14,6 +22,14 @@ services:
     container_name: shs_nodejs
     ports:
       - 24001:24001
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 100M
+        reservations:
+          cpus: '0.25'
+          memory: 50M
 
   python:
     build: ./python
@@ -21,6 +37,14 @@ services:
     container_name: shs_python
     ports:
       - 24002:24002
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 100M
+        reservations:
+          cpus: '0.25'
+          memory: 50M
 
   go:
     build: ./go
@@ -28,6 +52,14 @@ services:
     container_name: shs_go
     ports:
       - 24003:24003
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 100M
+        reservations:
+          cpus: '0.25'
+          memory: 50M
 
   dotnet:
     build: ./dotnet
@@ -35,6 +67,14 @@ services:
     container_name: shs_dotnet
     ports:
       - 24004:80
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 100M
+        reservations:
+          cpus: '0.25'
+          memory: 50M
 
   ruby:
     build: ./ruby
@@ -42,4 +82,11 @@ services:
     container_name: shs_ruby
     ports:
       - 24005:24005
-
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 100M
+        reservations:
+          cpus: '0.25'
+          memory: 50M
