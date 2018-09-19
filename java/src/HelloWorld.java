@@ -22,6 +22,7 @@ public class HelloWorld {
             System.out.println("HelloWorld from java!!!");
             String response = "HelloWorld from java!!!";
             t.sendResponseHeaders(200, response.length());
+            t.getResponseHeaders().set("Content-Type","text/html");
             OutputStream os = t.getResponseBody();
             os.write(response.getBytes());
             os.close();
