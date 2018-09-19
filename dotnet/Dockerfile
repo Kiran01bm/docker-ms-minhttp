@@ -8,7 +8,7 @@ WORKDIR /app
 RUN dotnet new web
 
 # Amend the hello world line
-RUN sed -i 's/Hello World!/Hello World from donet!!!/g' Startup.cs
+RUN sed -i 's/Hello World!/HelloWorld from donet!!!/g' Startup.cs
 
 # Pack the application and its dependencies into a Release folder
 RUN dotnet publish -c Release

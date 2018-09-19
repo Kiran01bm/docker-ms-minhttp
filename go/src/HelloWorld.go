@@ -12,7 +12,7 @@ func rootHandler(c *gin.Context) {
 	currentTime.Format("20060102150405")
 	c.JSON(200, gin.H{
 		"current_time": currentTime,
-		"text":         "Hello from go!!!",
+		"text": "HelloWorld from go!!!",
 	})
 }
 
