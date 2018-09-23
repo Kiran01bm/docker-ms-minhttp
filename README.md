@@ -7,3 +7,7 @@ This repo has a simple http server implemented in languages that are popular in 
 ```
 docker-compose -f docker-compose.yml up -d
 ```
+
+## Screen Prints
+![Alt text](docker-ps.png?raw=true "docker ps")
+![Alt text](docker-stats.png?raw=true "docker stats")
