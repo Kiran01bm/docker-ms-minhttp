@@ -1,42 +1,23 @@
 package main
 
 import (
-	"flag"
-	"time"
-
-	"github.com/gin-gonic/gin"
+  "fmt"
+  "net/http"
 )
 
-func rootHandler(c *gin.Context) {
-	currentTime := time.Now()
-	currentTime.Format("20060102150405")
-	c.JSON(200, gin.H{
-		"current_time": currentTime,
-		"text": "HelloWorld from go!!!",
-	})
+const (
+  port = ":24003"
+)
+
+func HelloWorld(w http.ResponseWriter, r *http.Request) {
+  calls++
+  fmt.Fprintf(w, "HelloWorld from go!!!")
 }
 
-// GetMainEngine is default router engine using gin framework.
-func GetMainEngine() *gin.Engine {
-	r := gin.New()
-
-	r.GET("/hello", rootHandler)
-
-	return r
+func init() {
+  fmt.Printf("Started server")
+  http.HandleFunc("/hello", HelloWorld)
+  http.ListenAndServe(port, nil)
 }
 
-// RunHTTPServer List 24003 default port
-func RunHTTPServer() error {
-	port := flag.String("port", "24003", "The port for the mock server to listen to")
-
-	// Parse all flag
-	flag.Parse()
-
-	err := GetMainEngine().Run(":" + *port)
-
-	return err
-}
-
-func main() {
-	RunHTTPServer()
-}
+func main() {}
