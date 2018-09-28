@@ -9,14 +9,13 @@ const (
   port = ":24003"
 )
 
-func HelloWorld(w http.ResponseWriter, r *http.Request) {
+func helloHandler(w http.ResponseWriter, r *http.Request) {
   fmt.Fprintf(w, "HelloWorld from go!!!")
 }
 
-func init() {
+func main() {
   fmt.Printf("Started server")
-  http.HandleFunc("/hello", HelloWorld)
+  http.HandleFunc("/hello", helloHandler)
   http.ListenAndServe(port, nil)
 }
 
-func main() {}
