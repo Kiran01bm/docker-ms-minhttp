@@ -10,7 +10,7 @@ const (
 )
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
-  fmt.Fprintf(w, "HelloWorld from go!!!")
+  fmt.Fprintf(w, "hello world from go!!!!!!")
 }
 
 func main() {

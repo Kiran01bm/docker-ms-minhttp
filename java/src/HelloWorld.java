@@ -19,8 +19,7 @@ public class HelloWorld {
     static class MyHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange t) throws IOException {
-            System.out.println("HelloWorld from java!!!");
-            String response = "HelloWorld from java!!!";
+            String response = "hello world from java!!!!";
             t.sendResponseHeaders(200, response.length());
             t.getResponseHeaders().set("Content-Type","text/html");
             OutputStream os = t.getResponseBody();
