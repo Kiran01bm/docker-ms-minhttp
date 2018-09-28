@@ -8,7 +8,7 @@ This repo has a simple http server implemented in languages that are popular in 
 docker-compose -f docker-compose.yml up -d
 ```
 
-## Tes
+## Test
 ```
 ./ab.sh
 ```
