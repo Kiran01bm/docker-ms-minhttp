@@ -10,7 +10,6 @@ const (
 )
 
 func HelloWorld(w http.ResponseWriter, r *http.Request) {
-  calls++
   fmt.Fprintf(w, "HelloWorld from go!!!")
 }
 
