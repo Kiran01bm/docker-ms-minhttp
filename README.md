@@ -19,3 +19,5 @@ Default is 10,000 Requests fired at 10 concurrency level and max wait of 1 sec p
 ![Alt text](docker-ps.png?raw=true "docker ps")
 ![Alt text](docker-stats.png?raw=true "docker stats")
 ![Alt text](docker-images.png?raw=true "docker images")
+![Alt text](ContainerStats.png?raw=true "container stats")
+![Alt text](MemoryUsage.png?raw=true "memory usage")
