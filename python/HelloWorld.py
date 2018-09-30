@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
+from socketserver import ThreadingMixIn
+import threading
 
-PORT = 24002
-
-class handler(BaseHTTPRequestHandler):
+class Handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         self.send_response(200)
@@ -13,9 +13,10 @@ class handler(BaseHTTPRequestHandler):
         self.wfile.write("hello world from python!!".encode())
         return
 
-try:
-    server = HTTPServer(('', PORT), handler)
-    server.serve_forever()
+class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
+    """Handle requests in a separate thread."""
 
-except KeyboardInterrupt:
-    server.socket.close()
+if __name__ == '__main__':
+    server = ThreadedHTTPServer(('', 24002), Handler)
+    print ('Started server, use <Ctrl-C> to stop')
+    server.serve_forever()

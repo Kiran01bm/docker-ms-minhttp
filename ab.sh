@@ -12,7 +12,7 @@ sleep 60s
 
 val=$(( 24000 + i ))
 echo "Connecting to http://localhost:$val/hello"
-ab -n 10000 -c 10 -s 1 http://localhost:$val/hello
+ab -n 10000 -c 10 -s 2 http://localhost:$val/hello
 i=$[$i+1]
 
 done
