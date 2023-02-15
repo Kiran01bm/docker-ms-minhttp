@@ -4,4 +4,4 @@
 javac -d /usr/apps/helloworld/classes /usr/apps/helloworld/src/HelloWorld.java
 
 # Run/Execute
-java -cp /usr/apps/helloworld/classes HelloWorld
+java -javaagent:/opt/newrelic/newrelic.jar -cp /usr/apps/helloworld/classes HelloWorld
